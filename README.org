@@ -1,0 +1,11 @@
+* Setup 
+
+** ec2
+
+sudo yum install git
+- ssl (yum)
+- node (build)
+- npm (curl)
+
+npm install express mongoose jade less expresso
+

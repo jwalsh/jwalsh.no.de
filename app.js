@@ -19,10 +19,20 @@ app.configure(function(){
 });
 
 app.configure('development', function(){
+  PORT = process.env.PORT || 3000;
+  FB_APP_ID='114140975331019'; // localhost
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
 });
 
+app.configure('staging', function(){
+  PORT = process.env.PORT || 80;
+  FB_APP_ID='196846820339657'; // AWS
+  app.use(express.errorHandler()); 
+});
+
 app.configure('production', function(){
+  PORT = process.env.PORT || 80;
+  FB_APP_ID='144378295625951'; // Joyent
   app.use(express.errorHandler()); 
 });
 
@@ -31,7 +41,8 @@ app.configure('production', function(){
 app.get('/', function(req, res){
   res.render('index', {
     locals: {
-      title: 'Express'
+      title: 'jwalsh.no.de',
+      fb_app_id: FB_APP_ID
     }
   });
 });
@@ -39,6 +50,6 @@ app.get('/', function(req, res){
 // Only listen on $ node app.js
 
 if (!module.parent) {
-  app.listen(3000);
+  app.listen(PORT);
   console.log("Express server listening on port %d", app.address().port)
 }

@@ -1,5 +1,7 @@
+console.log('app.js');
+
 window.fbAsyncInit = function() {
-  FB.init({appId: 'your app id', status: true, cookie: true,
+  FB.init({appId: '', status: true, cookie: true,
            xfbml: true});
 };
 
