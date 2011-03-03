@@ -1,6 +1,14 @@
 * Setup 
 
-** ec2
+** Development 
+
+Using nave to manage any environment changes.  Using stage with a sanbox checkout of node. 
+
+https://github.com/isaacs/nave/
+
+.profile and eshell (eshell-path-env
+
+** Staging 
 
 sudo yum install git
 - ssl (yum)
@@ -9,3 +17,56 @@ sudo yum install git
 
 npm install express mongoose jade less expresso
 
+http://ec2-174-129-111-176.compute-1.amazonaws.com/
+
+*** History 
+
+
+
+** Production 
+
+* Issues 
+
+** shell / eshell mismatch 
+
+eshell-path-env is a variable defined in `esh-util.el'.
+Its value is 
+"/Users/jwalsh/sandbox/emacs/lib-src:/Users/jwalsh/sandbox/emacs/src:/Users/jwalsh/sandbox/doctorjs/bin/:/Users/jwalsh/sandbox/coffee-script/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/bin:/Users/jwalsh/bin:/Users/jwalsh/opt/tomcat/bin"
+
+
+jwalsh@jwalshmac:~ (14:23 501) $ echo $PATH
+/Users/jwalsh/sandbox/emacs/lib-src:/Users/jwalsh/sandbox/emacs/src:/Users/jwalsh/sandbox/doctorjs/bin/:/Users/jwalsh/sandbox/coffee-script/bin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/bin:/Users/jwalsh/bin:/Users/jwalsh/opt/tomcat/bin
+
+
+* History 
+
+
+jwalsh@jwalshmac:~ (13:44 501) $ date
+Wed Mar  2 13:44:04 PST 2011
+jwalsh@jwalshmac:~ (13:44 502) $ node -v 
+v0.2.4
+jwalsh@jwalshmac:~ (13:44 503) $ npm -v 
+0.2.12-1
+
+[ec2-user@ip-10-194-98-220 ~]$ date 
+Wed Mar  2 21:43:43 UTC 2011
+[ec2-user@ip-10-194-98-220 ~]$ node -v
+v0.5.0-pre
+[ec2-user@ip-10-194-98-220 ~]$ npm -v 
+0.3.12
+
+jaw@falco:~ (13:46 501) $ date 
+Wed Mar  2 13:46:24 PST 2011
+jaw@falco:~ (13:46 502) $ node -v 
+v0.5.0-pre
+jaw@falco:~ (13:46 503) $ npm -v 
+-bash: npm: command not found
+
+Performed a reinstall of core applications on workstation based on the notes in http://dailyjs.com/2010/11/08/node-tutorial-2/ .
+
+jwalsh@jwalshmac:~ (14:05 503) $ date 
+Wed Mar  2 14:06:02 PST 2011
+jwalsh@jwalshmac:~ (14:06 504) $ node -v 
+v0.5.0-pre
+jwalsh@jwalshmac:~ (14:06 505) $ npm -v 
+0.3.12
