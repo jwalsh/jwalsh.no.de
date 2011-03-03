@@ -2,10 +2,10 @@ h1= title
 p Welcome to #{title}
 
 p 
-  fb:login-button(perms: "publish_stream, offline_access, manage_pages, read_insights")
+  fb:login-button(autologoutlink="true", perms: "publish_stream, offline_access, manage_pages, read_insights")
 
 p
   fb:like
 
 #fb-root
-script(src='/javascripts/global.js')
+script(src="/javascripts/global.js")
